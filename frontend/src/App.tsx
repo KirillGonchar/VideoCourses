@@ -1,10 +1,12 @@
-import './App.css'
+import './styles/global.css'
+import CourseList from './components/CourseList'
 
 function App() {
 
-  return (
-    <>
-    </>
+  return (    
+  <div className="App">
+      <CourseList />
+    </div>
   )
 }
 
