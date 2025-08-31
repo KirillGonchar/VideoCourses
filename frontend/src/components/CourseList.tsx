@@ -45,12 +45,11 @@ const CourseList: React.FC = () => {
         dispatch(playVideo(null));
     };
 
-    if (loading) return <p>Loading courses...</p>;
-    if (error) return <p style={{ color: "red" }}>{error}</p>;
-
     return (
         <div className="course-list">
             <h2>Available Courses</h2>
+            <div>{loading && <p>Loading courses...</p>}</div>
+            <div> {error && <p style={{ color: "red" }}>{error}</p>}</div>
             <div className="course-grid">
                 {!loading && !error && paginatedCourses.map((course) => (
                     <CourseCard
